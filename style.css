@@ -33,7 +33,7 @@ ul { list-style: none; }
 /* --- Base --- */
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
+  font-size: 0.82rem;
   line-height: 1.7;
   color: var(--color-body);
   background: var(--color-bg);
@@ -171,10 +171,13 @@ section { padding: 5rem 0; }
   background: #ffffff;
 }
 
-.site-mobile-menu h3 {
+.site-mobile-menu__label {
   color: #ffffff;
+  font-family: 'Inter', sans-serif;
   font-size: 0.85rem;
+  font-weight: 700;
   letter-spacing: 0.08em;
+  line-height: 1.2;
   text-transform: uppercase;
   margin: 0 0 0.8rem;
 }
@@ -330,7 +333,7 @@ section { padding: 5rem 0; }
   min-width: 0;
 }
 
-/* badge pill — used as h2 */
+/* badge pill */
 .hero__badge {
   display: inline-flex;
   align-items: center;
@@ -339,12 +342,12 @@ section { padding: 5rem 0; }
   border: 1.5px solid rgba(255,255,255,0.3);
   color: #ffffff;
   font-family: 'Inter', sans-serif;
-  font-size: 1.34rem;
+  font-size: 1rem;
   font-weight: 600;
-  padding: 0.75rem 1.6rem;
+  padding: 0.5rem 0.95rem;
   border-radius: 999px;
   margin-bottom: 1.4rem;
-  line-height: 1;
+  line-height: 1.25;
   letter-spacing: 0.01em;
 }
 .hero__badge-icon {
@@ -1504,6 +1507,11 @@ section { padding: 5rem 0; }
 
   .hero { padding: 3.5rem 0; }
   section { padding: 3.5rem 0; }
+  .hero__badge {
+    font-size: 0.8rem;
+    line-height: 1.25;
+    padding: 0.5rem 0.85rem;
+  }
   .hero__image-wrap {
     width: 240px;
     margin-inline: auto;
