@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://owenseo.co.uk/sitemap.xml
