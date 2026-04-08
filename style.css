@@ -1023,6 +1023,118 @@ section { padding: 5rem 0; }
   stroke-width: 2;
 }
 
+.industry-map {
+  aspect-ratio: 1;
+  max-width: 19rem;
+}
+
+.industry-map::before {
+  background:
+    linear-gradient(rgba(255,255,255,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.08) 1px, transparent 1px);
+  background-size: 3.2rem 3.2rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  content: '';
+  inset: 0;
+  opacity: 0.45;
+  position: absolute;
+}
+
+.industry-map__line {
+  border: 1px dashed rgba(255,255,255,0.35);
+  border-radius: 44% 56% 48% 52%;
+  inset: 14%;
+  position: absolute;
+}
+
+.industry-map__line::before,
+.industry-map__line::after {
+  background: rgba(255,255,255,0.28);
+  content: '';
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(28deg);
+  width: 112%;
+}
+
+.industry-map__line::after {
+  transform: translate(-50%, -50%) rotate(-34deg);
+}
+
+.industry-map__node {
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 8px;
+  box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  min-width: 4.8rem;
+  padding: 0.65rem 0.55rem;
+  position: absolute;
+  text-align: center;
+}
+
+.industry-map__node svg {
+  background: #ffffff;
+  border-radius: 999px;
+  color: #000000;
+  display: block;
+  height: 2.25rem;
+  padding: 0.48rem;
+  width: 2.25rem;
+}
+
+.coverage-map__visual .industry-map__node svg path,
+.coverage-map__visual .industry-map__node svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.industry-map__node span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 850;
+}
+
+.industry-map__node--dentists {
+  left: 7%;
+  top: 10%;
+}
+
+.industry-map__node--trades {
+  right: 5%;
+  top: 17%;
+}
+
+.industry-map__node--legal {
+  left: 34%;
+  top: 39%;
+}
+
+.industry-map__node--property {
+  bottom: 18%;
+  left: 4%;
+}
+
+.industry-map__node--saas {
+  bottom: 7%;
+  left: 41%;
+}
+
+.industry-map__node--creative {
+  bottom: 22%;
+  right: 0;
+}
+
 .areas-cover-grid article {
   align-items: center;
   background: #000000;
