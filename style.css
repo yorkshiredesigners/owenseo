@@ -93,7 +93,7 @@ section { padding: 5rem 0; }
 
 .site-header__inner {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: minmax(260px, 1fr) auto minmax(130px, 1fr);
   align-items: center;
   column-gap: 1rem;
   padding: 0.25rem 0;
@@ -103,10 +103,11 @@ section { padding: 5rem 0; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  justify-self: start;
 }
 
 .site-logo img {
-  width: 380px;
+  width: clamp(250px, 26vw, 310px);
   height: auto;
   border-radius: 0;
   max-height: 90px;
@@ -116,9 +117,10 @@ section { padding: 5rem 0; }
 .site-nav {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: clamp(1rem, 3vw, 2.4rem);
+  justify-content: center;
+  gap: clamp(0.85rem, 2vw, 1.8rem);
   flex-wrap: wrap;
+  justify-self: center;
 }
 
 .site-nav a {
@@ -139,6 +141,7 @@ section { padding: 5rem 0; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  justify-self: end;
   background: #ffffff;
   color: #000000;
   font-family: 'Inter', sans-serif;
@@ -1170,15 +1173,24 @@ section { padding: 5rem 0; }
   font-family: 'Inter', sans-serif;
   font-size: 0.75rem;
   font-weight: 800;
-  height: 2rem;
+  height: 2.9rem;
   justify-content: center;
-  margin-bottom: 1.1rem;
-  width: 2rem;
+  margin-bottom: 1.15rem;
+  width: 2.9rem;
 }
 
 .areas-cover-grid .areas-cover-pin svg {
-  height: 1rem;
-  width: 1rem;
+  height: 1.65rem;
+  width: 1.65rem;
+}
+
+.areas-cover-grid .areas-cover-pin svg path,
+.areas-cover-grid .areas-cover-pin svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2.25;
 }
 
 .content-block--light .areas-cover-grid h3,
