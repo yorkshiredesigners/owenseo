@@ -809,6 +809,79 @@ section { padding: 5rem 0; }
   line-height: 1.7;
 }
 
+.client-proof__head {
+  margin-bottom: 2rem;
+}
+
+.client-proof__head h2 {
+  color: #0f172a;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 650;
+  margin: 0;
+}
+
+.client-proof__head p {
+  color: #0f172a;
+  font-size: 0.98rem;
+  line-height: 1.75;
+  margin: 0.9rem 0 0;
+  max-width: 760px;
+}
+
+.client-proof__grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.client-proof__card {
+  align-items: start;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  display: grid;
+  gap: 1rem;
+  min-height: 100%;
+  padding: 1.4rem;
+}
+
+.client-proof__logo {
+  align-items: center;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  display: flex;
+  justify-content: center;
+  min-height: 190px;
+  padding: 1rem;
+}
+
+.client-proof__logo img {
+  display: block;
+  max-height: 132px;
+  max-width: 88%;
+  object-fit: contain;
+  width: auto;
+}
+
+.client-proof__logo img.client-proof__logo--bisaf {
+  max-height: 152px;
+  max-width: 96%;
+}
+
+.client-proof__copy h3 {
+  color: #0f172a;
+  font-size: 1.02rem;
+  margin: 0 0 0.35rem;
+}
+
+.client-proof__copy p {
+  color: #475569;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
 .location-about-me__inner {
   align-items: center;
   display: grid;
@@ -1617,6 +1690,7 @@ section { padding: 5rem 0; }
 }
 
 @media (max-width: 860px) {
+  .client-proof__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .standout__grid { grid-template-columns: 1fr; }
   .working-with-me__grid { grid-template-columns: 1fr; }
   .location-about-me__inner { grid-template-columns: 1fr; }
@@ -2052,6 +2126,7 @@ section { padding: 5rem 0; }
   .seo-includes-list { grid-template-columns: 1fr; }
 }
 @media (max-width: 560px) {
+  .client-proof__grid { grid-template-columns: 1fr; }
   .services__grid { grid-template-columns: 1fr; }
   .areas-cover-grid { grid-template-columns: 1fr; }
   .faq-card {
