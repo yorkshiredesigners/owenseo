@@ -2434,22 +2434,30 @@ section { padding: 5rem 0; }
 
   .site-header__inner {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    column-gap: 0.45rem;
+    padding: 0.2rem 0.75rem;
   }
 
   .site-logo {
     position: relative;
     z-index: 1002;
-    width: 100%;
+    width: auto;
     background: #000000;
-    padding: 0.55rem 0.75rem 0;
+    justify-content: flex-start;
+    max-height: 78px;
+    overflow: hidden;
+    padding: 0;
   }
 
   .site-logo img {
-    width: min(96vw, 520px);
-    max-height: 150px;
+    width: min(76vw, 380px);
+    height: 78px;
+    max-height: 78px;
+    object-fit: cover;
+    object-position: center 42%;
   }
 
   .site-nav,
@@ -2461,30 +2469,31 @@ section { padding: 5rem 0; }
     display: flex;
     position: relative;
     z-index: 1002;
-    width: 100%;
-    min-height: 50px;
+    width: 42px;
+    min-height: 38px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 7px;
+    gap: 5px;
     background: #000000;
-    border-top: 1px solid rgba(148,163,184,0.2);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 8px;
   }
 
   .site-menu-toggle:checked + .site-menu-button {
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 0.65rem;
+    right: 0.75rem;
     z-index: 1004;
-    width: 52px;
-    min-height: 52px;
+    width: 42px;
+    min-height: 38px;
     border: 1px solid rgba(255,255,255,0.2);
     border-radius: 8px;
     border-top: 1px solid rgba(255,255,255,0.2);
   }
 
   .site-menu-toggle:checked + .site-menu-button span {
-    width: 28px;
+    width: 22px;
   }
 
   .site-mobile-menu {
@@ -2514,7 +2523,7 @@ section { padding: 5rem 0; }
   }
 
   .site-menu-toggle:checked + .site-menu-button span:nth-child(1) {
-    transform: translateY(11px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
   }
 
   .site-menu-toggle:checked + .site-menu-button span:nth-child(2) {
@@ -2522,10 +2531,12 @@ section { padding: 5rem 0; }
   }
 
   .site-menu-toggle:checked + .site-menu-button span:nth-child(3) {
-    transform: translateY(-11px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
   }
 
   .site-menu-button span {
+    width: 22px;
+    height: 3px;
     transition: transform 0.2s ease, opacity 0.2s ease;
   }
 
