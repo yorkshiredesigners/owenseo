@@ -657,7 +657,7 @@ section { padding: 5rem 0; }
 .seo-feature {
   max-width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 1.05fr);
   gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
 }
@@ -672,6 +672,12 @@ section { padding: 5rem 0; }
   max-width: 460px;
 }
 
+.seo-feature__media--compact {
+  max-width: 680px;
+}
+
+
+
 .seo-feature__image {
   width: 100%;
   aspect-ratio: 4 / 3;
@@ -679,6 +685,11 @@ section { padding: 5rem 0; }
   border-radius: 24px;
   border: 1px solid rgba(255,255,255,0.12);
   box-shadow: 0 24px 60px rgba(0,0,0,0.35);
+}
+
+.seo-feature__image--compact {
+  aspect-ratio: 22 / 1.5;
+  object-position: center;
 }
 
 /* --- Content blocks --- */
