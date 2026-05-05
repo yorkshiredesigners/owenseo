@@ -2830,19 +2830,31 @@ section { padding: 5rem 0; }
 .site-footer__bottom {
   align-items: center;
   border-top: 1px solid rgba(255,255,255,0.12);
-  display: flex;
+  display: grid;
   gap: 1rem;
-  justify-content: space-between;
+  grid-template-columns: minmax(0, 1fr) auto;
   margin-top: 3rem;
   padding-top: 1.35rem;
   position: relative;
   z-index: 1;
 }
 
+.site-footer__bottom > p:not(.site-footer__bottom-associated) {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.site-footer__bottom-associated {
+  grid-column: 1 / -1;
+  grid-row: 2;
+}
+
 .site-footer__bottom-links {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .site-footer__bottom a {
@@ -2874,7 +2886,14 @@ section { padding: 5rem 0; }
 
   .site-footer__bottom {
     align-items: flex-start;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__bottom > p:not(.site-footer__bottom-associated),
+  .site-footer__bottom-associated,
+  .site-footer__bottom-links {
+    grid-column: 1;
+    grid-row: auto;
   }
 
   .site-footer__coverage {
